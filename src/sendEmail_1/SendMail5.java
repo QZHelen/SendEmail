@@ -31,9 +31,9 @@ public class SendMail5 {
 				message.setFrom(fromAddress);
 				message.setRecipient(Message.RecipientType.TO, toAddress);
 
-				message.setSubject("[重要]等待接机申请确认");
+				message.setSubject("[重要]等待接机申请确认");	// Subject of the email
 				message.setText("\n您好，\n\nUNCFACSS中国学生会收到您的接机申请，请您核对以下信息：" 
-						+ "\n\n祝好！" + "\nUNC FACSS");
+						+ "\n\n祝好！" + "\nUNC FACSS");	// Content
 				Transport transport = session.getTransport("smtp");
 				transport.connect(host, from, pass);
 				message.saveChanges();
